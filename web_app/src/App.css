@@ -1,0 +1,107 @@
+body {
+  background-color: #cbcdce;
+}
+.App {
+  text-align: center;
+  background-color: #cbcdce;
+  min-height: 100vh;
+}
+
+.banner-area{
+  height: 100px;
+  width: 100%;
+  background-color: #1f93cd;
+}
+body {
+  background: linear-gradient(90deg, rgba(137,228,235,1) 22%, rgba(91,236,188,1) 37%, rgba(138,221,235,1) 71%, rgba(116,211,236,1) 97%, rgba(0,212,255,1) 100%);
+}
+
+.menu-bar {
+  border-radius: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0 0 0;
+}
+.menu-bar li {
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+.menu-bar li:hover {
+  color: black;
+}
+.menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #e8edec, #d2d1d3);
+  box-shadow: 0px 3px 20px 0px black;
+  transform: scale(1.2);
+}
+
+
+/*form CSS*/
+
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  background: #fff;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+
+h2 {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*dashboard for CSS */
+
+img{
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  margin: 30px auto;
+
+}
