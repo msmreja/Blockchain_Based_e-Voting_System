@@ -1,9 +1,8 @@
-body {
-  background-color: #cbcdce;
-}
 .App {
   text-align: center;
-  background-color: #cbcdce;
+  background-repeat: no-repeat;
+  background-image:url('blockchain_back.gif');
+  background-size: 100% 100%;
   min-height: 100vh;
 }
 
@@ -12,10 +11,6 @@ body {
   width: 100%;
   background-color: #1f93cd;
 }
-body {
-  background: linear-gradient(90deg, rgba(137,228,235,1) 22%, rgba(91,236,188,1) 37%, rgba(138,221,235,1) 71%, rgba(116,211,236,1) 97%, rgba(0,212,255,1) 100%);
-}
-
 .menu-bar {
   border-radius: 25px;
   height: -webkit-fit-content;
