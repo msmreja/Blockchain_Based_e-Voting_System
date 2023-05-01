@@ -27,8 +27,8 @@ function AdminComponent({account, contractInstance}) {
     const [candidateAge, setCandidateAge] = useState();
     const [candidateAddress, setCandidatAddress] = useState();
     const [voterAddress, setVoterAddress] = useState();
-    const [winnerAddress, setWinnerAddress] = useState("shubham");
-    const [active, setActive]= useState("FirstCard");
+    const [winnerAddress, setWinnerAddress] = useState("msm");
+    const [active, setActive]= useState("DefaultCard");
 
     let loginActive=false;
     let signUpActive= false;
@@ -74,9 +74,7 @@ function AdminComponent({account, contractInstance}) {
 
     return(
         <div style={{paddingTop: "18px", paddingLeft: "5%", paddingRight: "5%" }}>
-            <div className='banner-area'style={{marginBottom: 20}} >
-                <h1>WELCOME TO COLLEGE PRESIDENT ELECTION</h1>
-            </div>
+
             <div id= "main-tem" className="main-tem">
             <ul id="menu-bar"  className="menu-bar">
             <li onClick={() => setActive("FirstCard")}>Register Candidate</li>
@@ -85,6 +83,9 @@ function AdminComponent({account, contractInstance}) {
             <li onClick={() => setActive("FourthCard")}>Result</li>
             </ul>
         </div>
+        <div className='banner-area'style={{marginTop: 100}} >
+                {active === "DefaultCard" && <h1>WELCOME... <br/> TO COLLEGE PRESIDENT ELECTION</h1>}
+            </div>
         <div className="dynamic-elmt"></div>
             <div>
                 <div style={{paddingTop:"10px",position: 'absolute', left: '50%', top: '60%',transform: 'translate(-50%, -50%)'}}>
