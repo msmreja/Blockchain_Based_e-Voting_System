@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-repeat: no-repeat;
-  background-image:url('blockchain_back.gif');
+  background-image:url('Back.jpg');
   background-size: 100% 100%;
   min-height: 100vh;
 }
@@ -10,6 +10,7 @@
   color: #d2d1d3;
   height: 100px;
   width: 100%;
+  font-family: 'Abel';font-size: 22px;
 }
 .menu-bar {
   border-radius: 25px;
@@ -99,4 +100,10 @@ img{
   border-radius: 20px;
   margin: 30px auto;
 
+}
+#stickr{
+  width: 500px; 
+  height: 500px; 
+  left: 0px; 
+  top: 0p
 }

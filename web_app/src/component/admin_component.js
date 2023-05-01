@@ -83,13 +83,14 @@ function AdminComponent({account, contractInstance}) {
             <li onClick={() => setActive("FourthCard")}>Result</li>
             </ul>
         </div>
-        <div className='banner-area'style={{marginTop: 100}} >
-                {active === "DefaultCard" && <h1>WELCOME... <br/> TO COLLEGE PRESIDENT ELECTION</h1>}
-            </div>
+        {active === "DefaultCard" && <div className='banner-area'style={{marginTop: 50}} >
+                <h1>WELCOME... <br/> TO COLLEGE PRESIDENT ELECTION</h1>
+                <img id='stickr' src='https://media4.giphy.com/media/gHi4YMtu5ilxykWCXj/giphy.gif?cid=ecf05e47ydl417hgleybxzr11x8wh4hk0h7izpnhfeo1tzd0&ep=v1_gifs_related&rid=giphy.gif&ct=s'/>
+            </div>}
         <div className="dynamic-elmt"></div>
             <div>
                 <div style={{paddingTop:"10px",position: 'absolute', left: '50%', top: '60%',transform: 'translate(-50%, -50%)'}}>
-                {active === "FirstCard" &&  <Card sx={{ width: 400 }}>
+                {active === "FirstCard" &&  <Card sx={{ width: 400, marginTop: '-200px' }}>
                         <Typography gutterBottom variant="h5" component="div" align='left' paddingLeft={2} style={{marginTop: '10px'}}>
                             Register Candidate
                         </Typography>
@@ -106,7 +107,7 @@ function AdminComponent({account, contractInstance}) {
                         </CardActions>
                     </Card>}
 
-                    {active === "SecondCard" &&<Card sx={{ maxWidth: 400, marginTop: 5, marginBottom: 5}}>
+                    {active === "SecondCard" &&<Card sx={{ maxWidth: 400, marginTop: '-200px', marginBottom: 5}}>
                         <Typography gutterBottom variant="h5" component="div" align='left' paddingLeft={2} style={{marginTop: '10px'}}>
                             Register Voter
                         </Typography>
@@ -121,7 +122,7 @@ function AdminComponent({account, contractInstance}) {
                 </div>
 
                  <div style={{paddingTop:"10px",position: 'absolute', left: '50%', top: '60%',transform: 'translate(-50%, -50%)'}}>
-                 {active === "ThirdCard" &&<Card sx={{ width: 400}}>
+                 {active === "ThirdCard" &&<Card sx={{ width: 400, marginTop: '-200px'}}>
                         <Typography gutterBottom variant="h5" component="div" align='left' paddingLeft={2}>
                             Start Voting
                         </Typography>
@@ -130,7 +131,7 @@ function AdminComponent({account, contractInstance}) {
                         </CardActions>
                     </Card>}
 
-                    {active === "ThirdCard" &&<Card sx={{ maxWidth: 400, marginTop: 5}}>
+                    {active === "ThirdCard" &&<Card sx={{ maxWidth: 400, marginTop: '-200px'}}>
                         <Typography gutterBottom variant="h5" component="div" align='left' paddingLeft={2}>
                             Stop Voting
                         </Typography>
@@ -139,7 +140,7 @@ function AdminComponent({account, contractInstance}) {
                         </CardActions>
                     </Card>}
 
-                    {active === "FourthCard" &&<Card sx={{ maxWidth: 400, marginTop: 5}}>
+                    {active === "FourthCard" &&<Card sx={{ maxWidth: 400, marginTop: '-200px'}}>
                         <CardContent>
                             <TextField id="outlined-basic" label={winnerAddress} variant="outlined" disabled style={{width: '100%'}}/>
                         </CardContent>
