@@ -31,20 +31,95 @@ function VoterComponent({account, contractInstance}) {
   }
 
   return (
-    <div style={{paddingTop: "18px", paddingLeft: "5%",paddingRight: "5%" }}>
+    <div style={{paddingTop: "5%", paddingLeft: "5%",paddingRight: "5%" }}>
         <div className='banner-area'style={{marginBottom: 20}} >
-          <h1>WELCOME TO PRESIDENT ELECTION</h1>
+          <h1>WELCOME...<br/> TO PRESIDENT ELECTION</h1>
         </div>
         <div>
           {
             votingStatus == false ? 
             <>
-              <h2>Voting not started yet !!</h2>
+              <h2  style={{paddingTop: "30px"}}>Voting not started yet !!</h2>
             </>
             :
             totalCandidate.map((candidate)=>{
               return(
-                <Card sx={{ maxWidth: 380, float: "left", marginLeft: 8, marginBottom: 8 }}>
+                <>
+                 {/*
+                  <div className="container">
+                    <div className="card">
+                      <div className="content">
+                        <div className="img"><img src="https://unsplash.it/200/200"/></div>
+                        <div className="cardContent">
+                          <h3>Luis Molina<br/><span>Web Developer</span></h3>
+                        </div>
+                      </div>
+                      <ul className="sci">
+                        <li style="--i:1">
+                          <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:2">
+                          <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                          <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className="card">
+                      <div className="content">
+                        <div className="img"><img src="https://unsplash.it/200/201"/></div>
+                        <div className="cardContent">
+                          <h3>Someone Else<br/><span>Grafic Designer</span></h3>
+                        </div>
+                      </div>
+                      <ul className="sci">
+                        <li style="--i:1">
+                          <a><i className="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:2">
+                          <a><i className="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                          <a ><i className="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    </div>
+                  </div>
+              */}
+<div style={{alignContent:"center", paddingLeft:"28%"}}>
+<div  style={{float: "left", paddingTop:"12%"}} className="container">
+        <div  className="card">
+          <div className="content">
+            {/*<div className="img"><img src="https://unsplash.it/200/200" /></div>*/}
+            <div className="cardContent">
+            <CardMedia
+                      component="img"
+                      height="340"
+                      image={personImage}
+                      alt="green iguana"
+                    />
+            <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                       Name: {candidate.name} 
+                      </Typography>
+                      <Typography variant="body2" color="white">
+                        Age :{candidate.age}<br/>
+                        {candidate.address}
+                      </Typography>
+            </CardContent>
+            </div>
+          </div>
+          <ul className="sci">
+            <li>
+              <Button variant="contained" onClick={(e)=>vote(candidate)}>Vote</Button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
+             {/*   <Card sx={{ maxWidth: 380, float: "left", marginLeft: 8, marginBottom: 8 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -67,6 +142,8 @@ function VoterComponent({account, contractInstance}) {
                     <Button variant="contained" onClick={(e)=>vote(candidate)}>Vote</Button>
                   </CardActions>
                 </Card>
+            */}
+                </>
               )
             })
           } 

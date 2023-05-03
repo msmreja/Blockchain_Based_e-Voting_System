@@ -79,7 +79,7 @@ function AdminComponent({account, contractInstance}) {
             <ul id="menu-bar"  className="menu-bar">
             <li onClick={() => setActive("FirstCard")}>Register Candidate</li>
             <li onClick={() => setActive("SecondCard")}>Register Voter </li>
-            <li onClick={() => setActive("ThirdCard")}>Start/Stop Voting</li>
+            <li onClick={() => setActive("ThirdCard")}>Start / Stop Voting</li>
             <li onClick={() => setActive("FourthCard")}>Result</li>
             </ul>
         </div>
@@ -103,7 +103,7 @@ function AdminComponent({account, contractInstance}) {
                                 onChange={(e)=>setCandidatAddress(e.target.value)}/>
                         </CardContent>
                         <CardActions>
-                            <Button variant="contained" onClick={register_candidate}>Register Candidate</Button>
+                            <Button style={{left:"20%"}} variant="contained" onClick={register_candidate}>Register Candidate</Button>
                         </CardActions>
                     </Card>}
 
@@ -116,27 +116,29 @@ function AdminComponent({account, contractInstance}) {
                                 onChange={(e)=>setVoterAddress(e.target.value)}/>
                         </CardContent>
                         <CardActions>
-                            <Button variant="contained" onClick={register_voter}>Register Voter</Button>
+                            <Button style={{left:"20%"}} variant="contained" onClick={register_voter}>Register Voter</Button>
                         </CardActions>
                     </Card>}
                 </div>
 
                  <div style={{paddingTop:"10px",position: 'absolute', left: '50%', top: '60%',transform: 'translate(-50%, -50%)'}}>
                  {active === "ThirdCard" &&<Card sx={{ width: 400, marginTop: '-200px'}}>
-                        <Typography gutterBottom variant="h5" component="div" align='left' paddingLeft={2}>
+                        <Typography gutterBottom variant="h5" component="div" align='center' paddingLeft={2}>
                             Start Voting
                         </Typography>
                         <CardActions align="middle">
-                            <Button variant="contained" onClick={start_voting}>Start Voting</Button>
+                            <div align='center'>
+                            <Button style={{left:"96%"}} variant="contained" onClick={start_voting}>Start Voting</Button>
+                            </div>
                         </CardActions>
                     </Card>}
 
                     {active === "ThirdCard" &&<Card sx={{ maxWidth: 400, marginTop: '-200px'}}>
-                        <Typography gutterBottom variant="h5" component="div" align='left' paddingLeft={2}>
+                        <Typography gutterBottom variant="h5" component="div" align='center' paddingLeft={2}>
                             Stop Voting
                         </Typography>
                         <CardActions>
-                            <Button variant="contained" onClick={stop_voting}>Stop Voting</Button>
+                            <Button style={{left:"35%"}} variant="contained" onClick={stop_voting}>Stop Voting</Button>
                         </CardActions>
                     </Card>}
 
@@ -145,8 +147,9 @@ function AdminComponent({account, contractInstance}) {
                             <TextField id="outlined-basic" label={winnerAddress} variant="outlined" disabled style={{width: '100%'}}/>
                         </CardContent>
                         <CardActions>
-                            <Button variant="contained" onClick={get_Winner}>Get Wineer</Button>
+                            <Button style={{left:"35%"}} variant="contained" onClick={get_Winner}>Get Wineer</Button>
                         </CardActions>
+                            <p style={{color:"red", padding:"20px"}}>*Note: Stop Voting first to get the Results ...!!</p>
                     </Card>}
                 </div>
                 
